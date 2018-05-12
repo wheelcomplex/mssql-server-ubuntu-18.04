@@ -1,4 +1,4 @@
-# Work round for install Microsoft's SQL Server (mssql) on Ubuntu 18.04 X86_64 LTS
+# workaround for install Microsoft's SQL Server (mssql) on Ubuntu 18.04 X86_64 LTS
 
 ## WARNING: FOR TESTING  ONLY
 
