@@ -1,5 +1,4 @@
-# mssql-server-ubuntu-18.04
-Work round for install Microsoft's SQL Server (mssql) on Ubuntu 18.04 X96_64 LTS
+# Work round for install Microsoft's SQL Server (mssql) on Ubuntu 18.04 X86_64 LTS
 
 ## WARNING: FOR TESTING  ONLY
 
