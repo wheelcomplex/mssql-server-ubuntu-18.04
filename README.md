@@ -36,7 +36,10 @@ sudo apt install -f
 sudo dpkg -i 18.04-mssql-server_14.0.3025.34-3_amd64_.deb
 ```
 * follow the messages from package to setup the mssql server
-* Note: the database directory /var/opt/mssql should not put on zfs dataset, if you are using zfs, create a zvol and format as ext4/xfs for it
+# Trouble shooting
+* the database directory /var/opt/mssql should not put on zfs dataset, if you are using zfs, create a zvol and format as ext4/xfs for it.
+* Error: "Dump collecting thread [4404] hit exception [6]. Exiting.", Fix: sudo usermod -a -G disk mssql, reason: mssql user can not access zvol.
+
 
 ### reference: 
 * https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-linux-2017
