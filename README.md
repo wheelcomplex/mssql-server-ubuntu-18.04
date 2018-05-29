@@ -4,11 +4,12 @@
 
 * download latest package mssql-server_14.0.3025.34-3_amd64.deb from https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/
 ```
-cd ${HOME} && mkdir -p tmp/mssql/newpkg/DEBIAN/ && cd tmp/mssql
+cd ${HOME} && mkdir -p tmp/mssql/ && cd tmp/mssql
 wget https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb
 ```
 * unpack
 ```
+mkdir -p newpkg/DEBIAN/
 dpkg-deb -x mssql-server_14.0.3025.34-3_amd64.deb newpkg/
 dpkg-deb -e mssql-server_14.0.3025.34-3_amd64.deb newpkg/DEBIAN/
 ```
