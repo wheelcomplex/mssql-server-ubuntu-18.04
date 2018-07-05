@@ -16,12 +16,13 @@ dpkg-deb -e mssql-server.deb newpkg/DEBIAN/
 * modify 
 ```
 sed -i -e 's#openssl (<= 1.1.0)#openssl (<= 1.1.1)#g' newpkg/DEBIAN/control
-libcurl3
+
 cat newpkg/DEBIAN/control | grep openssl
 ```
 * optional modify(from [Mike](https://askubuntu.com/questions/1032532/how-do-i-install-ms-sql-for-ubuntu-18-04-lts/1035144?noredirect=1#comment1690259_1035144), thanks)
 ```
 sed -i -e 's#libcurl3#libcurl4#g' newpkg/DEBIAN/control
+
 cat newpkg/DEBIAN/control | grep libcurl
 ```
 * repackage
