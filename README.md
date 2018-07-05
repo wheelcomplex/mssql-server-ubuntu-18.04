@@ -2,16 +2,16 @@
 
 ## WARNING: FOR TESTING  ONLY
 
-* download latest package mssql-server_14.0.3025.34-3_amd64.deb from https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/
+* download latest package mssql-server_14.0.3029.16-1_amd64.deb from https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/
 ```
 cd ${HOME} && mkdir -p tmp/mssql/ && cd tmp/mssql
-wget https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb
+wget https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3029.16-1_amd64.deb -O mssql-server.deb
 ```
 * unpack
 ```
 mkdir -p newpkg/DEBIAN/
-dpkg-deb -x mssql-server_14.0.3025.34-3_amd64.deb newpkg/
-dpkg-deb -e mssql-server_14.0.3025.34-3_amd64.deb newpkg/DEBIAN/
+dpkg-deb -x mssql-server.deb newpkg/
+dpkg-deb -e mssql-server.deb newpkg/DEBIAN/
 ```
 * modify 
 ```
@@ -26,12 +26,12 @@ cat newpkg/DEBIAN/control | grep libcurl
 ```
 * repackage
 ```
-dpkg-deb -b newpkg/ 18.04-mssql-server_14.0.3025.34-3_amd64_.deb
+dpkg-deb -b newpkg/ 18.04-mssql-server.deb
 ```
 
 * first try, this will fail for dependencies
 ```
-sudo dpkg -i 18.04-mssql-server_14.0.3025.34-3_amd64_.deb
+sudo dpkg -i 18.04-mssql-server.deb
 ```
 
 * install dependencies
@@ -40,7 +40,7 @@ sudo apt install -f
 ```
 * second try, this should be done
 ```
-sudo dpkg -i 18.04-mssql-server_14.0.3025.34-3_amd64_.deb
+sudo dpkg -i 18.04-mssql-server.deb
 ```
 * follow the messages from package to setup the mssql server
 # Trouble shooting
