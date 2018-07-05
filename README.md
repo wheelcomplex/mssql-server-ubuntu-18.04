@@ -46,6 +46,7 @@ sudo dpkg -i 18.04-mssql-server.deb
 ```
 systemctl enable mssql-server
 
+systemctl start mssql-server
 
 ```
 
