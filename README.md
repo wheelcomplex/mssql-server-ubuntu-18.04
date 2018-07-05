@@ -42,6 +42,13 @@ sudo dpkg -i 18.04-mssql-server.deb
 
 * follow the messages from package to setup the mssql server
 
+* enable on boot startup
+```
+systemctl enable mssql-server
+
+
+```
+
 # Trouble shooting
 * the database directory /var/opt/mssql should not put on zfs dataset, if you are using zfs, create a zvol and format as ext4/xfs for it.
 * Error: "Dump collecting thread [4404] hit exception [6]. Exiting.", Fix: sudo usermod -a -G disk mssql, reason: mssql user can not access zvol.
