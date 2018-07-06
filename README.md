@@ -50,10 +50,15 @@ systemctl start mssql-server
 
 ```
 
+* Hints:
+limit memory usage to 512MB: 
+```
+sudo /opt/mssql/bin/mssql-conf set memory.memorylimitmb 512 && sudo systemctl restart mssql-server.service
+```
+
 # Trouble shooting
 * the database directory /var/opt/mssql should not put on zfs dataset, if you are using zfs, create a zvol and format as ext4/xfs for it.
 * Error: "Dump collecting thread [4404] hit exception [6]. Exiting.", Fix: sudo usermod -a -G disk mssql, reason: mssql user can not access zvol.
-
 
 ### reference: 
 * https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-linux-2017
