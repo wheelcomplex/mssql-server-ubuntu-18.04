@@ -50,8 +50,8 @@ systemctl start mssql-server
 
 ```
 
-* Hints:
-limit memory usage to 512MB: 
+# Hints:
+* limit memory usage to 512MB: 
 ```
 sudo /opt/mssql/bin/mssql-conf set memory.memorylimitmb 512 && sudo systemctl restart mssql-server.service
 ```
