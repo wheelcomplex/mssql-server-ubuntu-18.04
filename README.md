@@ -1,3 +1,6 @@
+
+### NOTE: SQL Server 2019 (mssql) for Ubuntu 18.04 is ready from Microsoft: https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver15
+
 # workaround for install Microsoft's SQL Server (mssql) on Ubuntu 18.04 X86_64 LTS
 
 ## WARNING: FOR TESTING  ONLY
